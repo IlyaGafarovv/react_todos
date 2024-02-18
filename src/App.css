@@ -3,8 +3,91 @@ body {
   padding: 0;
   box-sizing: border-box;
 
-  background-image: linear-gradient(to bottom, #020917, #101725);
-
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  color: #fff;
+  color: #000000;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  /* padding: 120px 24px 160px 24px; */
+
+  position: fixed;
+  pointer-events: none;
+}
+
+.app:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.app:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.4;
+  background-image: url('assets/images/grid.svg');
+
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  filter: invert(1);
+}
+
+.gradient {
+  width: 100%;
+  max-width: 640px;
+  height: fit-content;
+
+  z-index: 3;
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  content: '';
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.15;
+  filter: blur(100px) saturate(150%);
+
+  position: absolute;
+  top: 80px;
+}
+
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.title {
+  margin: 24px 0 40px;
+
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #e91123;
+}
+
+.title span {
+  color: #1177f3;
 }
