@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Space Mono', monospace, Helvetica, Arial, sans-serif;
   color: #000000;
 }
 
@@ -15,7 +17,6 @@ body {
   /* padding: 120px 24px 160px 24px; */
 
   position: fixed;
-  pointer-events: none;
 }
 
 .app:before {
@@ -49,7 +50,6 @@ body {
   max-width: 640px;
   height: fit-content;
 
-  z-index: 3;
   background-image: radial-gradient(
       at 27% 37%,
       hsla(215, 98%, 61%, 1) 0px,
@@ -70,24 +70,32 @@ body {
 
   position: absolute;
   top: 80px;
+  z-index: 3;
 }
 
 .main {
-  max-width: 600px;
+  height: 100%;
+  width: 100%;
+  max-width: 60rem;
   margin: 0 auto;
 
   text-align: center;
+
+  position: absolute;
+  z-index: 4;
 }
 
 .title {
-  margin: 24px 0 40px;
+  margin: 20px 0 40px;
 
   font-size: 4rem;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
-  color: #e91123;
+  color: #f44250;
+
+  user-select: none;
 }
 
 .title span {
-  color: #1177f3;
+  color: #fecc1b;
 }
