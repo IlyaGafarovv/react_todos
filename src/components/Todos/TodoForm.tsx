@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './TodoForm.module.css'
+import Button from '../UI/Button'
 
 type Props = {
   addTodo: (text: string) => void
@@ -22,10 +23,13 @@ export default function TodoForm({ addTodo }: Props) {
         <input
           type='text'
           placeholder='What else?'
+          maxLength={25}
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button type='submit'>new ToDo</button>
+        <Button type='submit' title='Add'>
+          new ToDo
+        </Button>
       </form>
     </section>
   )

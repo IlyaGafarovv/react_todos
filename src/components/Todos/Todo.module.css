@@ -7,61 +7,56 @@
   margin: 2rem auto;
 
   border-radius: 0.4rem;
-  border: 2px solid #555;
   background: transparent;
+  border: 2px solid #555;
 
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 700;
   color: #104d51;
 }
 
 .todoText {
   width: 100%;
+  margin: 0;
+
   text-align: left;
 }
 
-.todoIcon {
-  margin-right: 0.7rem;
-
-  font-size: 1.8rem;
-  color: teal;
-  cursor: pointer;
+.todoText::selection {
+  background: rgb(25, 207, 80);
 }
 
 .completedTodo {
-  border-color: gray;
-  background-color: unset;
-
-  color: gray;
+  text-decoration: line-through;
+  color: teal;
 }
 
-.todo.completedTodo .todoIcon,
-.todo.completedTodo .checkIcon,
-.todo.completedTodo .deleteIcon {
-  color: gray;
+.todo.completedTodo .checkIcon {
+  color: #fecc1b;
+}
+
+.todoIcon {
+  margin-right: 1rem;
+
+  font-size: 1.7rem;
+  color: teal;
 }
 
 .checkIcon,
 .deleteIcon {
-  padding: 0 7px;
+  margin: 0 0.3rem;
 
-  font-size: 1.8rem;
-  color: lightgrey;
+  font-size: 2rem;
+  color: teal;
 
-  transition: transform 0.3s;
+  transition: color 0.2s linear;
   cursor: pointer;
 }
 
-.checkIcon:hover,
 .deleteIcon:hover {
-  cursor: pointer;
-  transform: scale(1.3);
+  color: #3992ff;
 }
 
 .checkIcon:hover {
-  color: green;
-}
-
-.deleteIcon:hover {
-  color: red;
+  color: #fecc1b;
 }

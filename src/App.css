@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+html,
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 
   font-family: 'Space Mono', monospace, Helvetica, Arial, sans-serif;
   color: #000000;
@@ -11,15 +14,28 @@ body {
 
 .app {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100vw;
-  min-height: 100vh;
-  /* padding: 120px 24px 160px 24px; */
-
-  position: fixed;
+  height: 100vh;
 }
 
-.app:before {
+.app::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.4;
+  background-image: url('./assets/images/grid.svg');
+
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
+  filter: invert(1);
+}
+
+.app::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -31,25 +47,10 @@ body {
   z-index: 2;
 }
 
-.app:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-
-  opacity: 0.4;
-  background-image: url('assets/images/grid.svg');
-
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  filter: invert(1);
-}
-
 .gradient {
-  width: 100%;
-  max-width: 640px;
   height: fit-content;
 
+  opacity: 0.15;
   background-image: radial-gradient(
       at 27% 37%,
       hsla(215, 98%, 61%, 1) 0px,
@@ -61,33 +62,30 @@ body {
     radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
     radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
     radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+
   content: '';
   width: 100%;
   height: 100%;
 
-  opacity: 0.15;
-  filter: blur(100px) saturate(150%);
-
   position: absolute;
-  top: 80px;
+  top: 0;
   z-index: 3;
+
+  filter: blur(100px) saturate(150%);
 }
 
 .main {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   max-width: 60rem;
-  margin: 0 auto;
+  margin: 2rem auto;
 
   text-align: center;
 
-  position: absolute;
   z-index: 4;
 }
 
 .title {
-  margin: 20px 0 40px;
-
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -98,4 +96,12 @@ body {
 
 .title span {
   color: #fecc1b;
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+}
+
+.subtitle::selection {
+  background: #fecc1b;
 }

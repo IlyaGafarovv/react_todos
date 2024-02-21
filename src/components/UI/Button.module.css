@@ -1,0 +1,24 @@
+.button {
+  display: inline-block;
+  margin-left: 2rem;
+  padding: 1rem 1.5rem;
+
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #311b1d;
+
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+.button:hover {
+  outline: 1px solid #311b1d;
+  background-color: transparent;
+
+  color: #311b1d;
+}

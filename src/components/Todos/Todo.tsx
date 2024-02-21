@@ -1,5 +1,6 @@
-import { RiTodoFill, RiDeleteBin2Line } from 'react-icons/ri'
-import { FaCheck } from 'react-icons/fa'
+import { IoCheckmarkDoneOutline } from 'react-icons/io5'
+import { BsFileEarmarkRichtext } from 'react-icons/bs'
+import { BiSolidTrashAlt } from 'react-icons/bi'
 
 import style from './Todo.module.css'
 import { TodoType } from '../../types/TodoType'
@@ -15,16 +16,18 @@ export default function Todo({ todo, toggleTodo, deleteTodo }: Props) {
     <div
       className={`${style.todo} ${todo.isCompleted ? style.completedTodo : ''}`}
     >
-      <RiTodoFill className={style.todoIcon} />
-      <div className={style.todoText}>{todo.text}</div>
+      <BsFileEarmarkRichtext className={style.todoIcon} />
+      <h4 className={style.todoText}>{todo.text}</h4>
 
-      <RiDeleteBin2Line
+      <BiSolidTrashAlt
         className={style.deleteIcon}
         onClick={() => deleteTodo(todo.id)}
+        title='Delete Todo'
       />
-      <FaCheck
+      <IoCheckmarkDoneOutline
         className={style.checkIcon}
         onClick={() => toggleTodo(todo.id)}
+        title='Mark as Completed'
       />
     </div>
   )
