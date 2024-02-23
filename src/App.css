@@ -16,8 +16,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .app::before {
@@ -75,7 +75,7 @@ body {
 }
 
 .main {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   max-width: 60rem;
   margin: 2rem auto;
@@ -96,12 +96,4 @@ body {
 
 .title span {
   color: #fecc1b;
-}
-
-.subtitle {
-  margin-bottom: 2rem;
-}
-
-.subtitle::selection {
-  background: #fecc1b;
 }

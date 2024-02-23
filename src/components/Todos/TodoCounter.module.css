@@ -1,0 +1,7 @@
+.todoCounterContainer {
+  padding: 1.5rem 0 2.5rem;
+}
+
+.todoCounterContainer h2::selection {
+  background: #fecc1b;
+}

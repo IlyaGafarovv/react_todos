@@ -1,17 +1,21 @@
+import { useContext } from 'react'
+
 import { IoCheckmarkDoneOutline } from 'react-icons/io5'
 import { BsFileEarmarkRichtext } from 'react-icons/bs'
 import { BiSolidTrashAlt } from 'react-icons/bi'
 
 import style from './Todo.module.css'
-import { TodoType } from '../../types/TodoType'
+
+import { TodoContext } from '../../context/todoContext'
+import { ITodo, TodoContextType } from '../../types/todo'
 
 type Props = {
-  todo: TodoType
-  toggleTodo: (id: string) => void
-  deleteTodo: (id: string) => void
+  todo: ITodo
 }
 
-export default function Todo({ todo, toggleTodo, deleteTodo }: Props) {
+export default function Todo({ todo }: Props) {
+  const { toggleTodo, deleteTodo } = useContext(TodoContext) as TodoContextType
+
   return (
     <div
       className={`${style.todo} ${todo.isCompleted ? style.completedTodo : ''}`}

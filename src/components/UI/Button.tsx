@@ -1,8 +1,8 @@
 import style from './Button.module.css'
 
-import { ButtonType } from '../../types/ButtonType'
+import { IButton } from '../../types/button'
 
-export default function Button(props: ButtonType) {
+export default function Button(props: IButton) {
   const { children, disabled = false } = props
 
   return (

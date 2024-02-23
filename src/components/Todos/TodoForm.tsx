@@ -1,12 +1,14 @@
-import React from 'react'
+import * as React from 'react'
+
 import style from './TodoForm.module.css'
+
+import { TodoContext } from '../../context/todoContext'
+import { TodoContextType } from '../../types/todo'
+
 import Button from '../UI/Button'
 
-type Props = {
-  addTodo: (text: string) => void
-}
-
-export default function TodoForm({ addTodo }: Props) {
+export default function TodoForm() {
+  const { addTodo } = React.useContext(TodoContext) as TodoContextType
   const [text, setText] = React.useState('')
 
   const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
