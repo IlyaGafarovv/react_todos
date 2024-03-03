@@ -6,8 +6,8 @@ import { BiSolidTrashAlt } from 'react-icons/bi'
 
 import style from './Todo.module.css'
 
-import { TodoContext } from '../../context/todoContext'
-import { ITodo, TodoContextType } from '../../types/todo'
+import { TodoContext } from 'context/todoContext'
+import { ITodo, TodoContextType } from 'types/todo'
 
 type Props = {
   todo: ITodo

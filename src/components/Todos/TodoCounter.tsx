@@ -2,8 +2,8 @@ import { useContext } from 'react'
 
 import style from './TodoCounter.module.css'
 
-import { TodoContext } from '../../context/todoContext'
-import { TodoContextType } from '../../types/todo'
+import { TodoContext } from 'context/todoContext'
+import { TodoContextType } from 'types/todo'
 
 export default function TodoCounter() {
   const { completedTodosCount } = useContext(TodoContext) as TodoContextType

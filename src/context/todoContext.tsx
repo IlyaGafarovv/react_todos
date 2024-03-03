@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
-import { TodoContextType, ITodo } from '../types/todo'
+import { TodoContextType, ITodo } from 'types/todo'
 
 export const TodoContext = React.createContext<TodoContextType | null>(null)
 

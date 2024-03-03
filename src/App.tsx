@@ -1,11 +1,6 @@
-import './App.css'
+import 'App.css'
 
-import {
-  TodoForm,
-  TodoList,
-  TodoActions,
-  TodoCounter,
-} from './components/Todos'
+import { TodoForm, TodoList, TodoActions, TodoCounter } from 'components/Todos'
 
 export default function App() {
   return (

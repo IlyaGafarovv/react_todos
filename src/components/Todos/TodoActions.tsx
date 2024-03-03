@@ -5,8 +5,8 @@ import { IoMdTrash } from 'react-icons/io'
 
 import style from './TodoActions.module.css'
 
-import { TodoContextType } from '../../types/todo'
-import { TodoContext } from '../../context/todoContext'
+import { TodoContextType } from 'types/todo'
+import { TodoContext } from 'context/todoContext'
 
 import Button from '../UI/Button'
 

@@ -2,8 +2,8 @@ import * as React from 'react'
 
 import style from './TodoForm.module.css'
 
-import { TodoContext } from '../../context/todoContext'
-import { TodoContextType } from '../../types/todo'
+import { TodoContext } from 'context/todoContext'
+import { TodoContextType } from 'types/todo'
 
 import Button from '../UI/Button'
 
