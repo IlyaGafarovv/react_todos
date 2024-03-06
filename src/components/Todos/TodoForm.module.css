@@ -10,10 +10,9 @@
 
 .todoFormContainer input {
   width: 45%;
-  height: 2rem;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.5rem;
 
-  border: none;
+  outline: 1px solid #dfd6d6;
   border-radius: 0.4rem;
 
   font-family: inherit;
@@ -28,5 +27,5 @@
 
 .todoFormContainer input:focus {
   background: transparent;
-  outline: 1px solid #553d3f;
+  outline-color: #553d3f;
 }

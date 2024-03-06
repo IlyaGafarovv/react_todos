@@ -1,14 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+input,
+button {
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
 html,
 body {
   height: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   overflow-x: hidden;
 
   font-family: 'Space Mono', monospace, Helvetica, Arial, sans-serif;
+  font-size: 62, 5%;
+
   color: #000000;
 }
 
@@ -81,11 +95,12 @@ body {
   margin: 2rem auto;
 
   text-align: center;
-
   z-index: 4;
 }
 
 .title {
+  margin-bottom: 1rem;
+
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
