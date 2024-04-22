@@ -1,7 +1,22 @@
-.todoCounterContainer {
+.todoCounter {
   padding: 1.5rem 0 2.5rem;
+  font-size: 2rem;
 }
 
-.todoCounterContainer h2::selection {
-  background: #fecc1b;
+.todoCounter h2::selection {
+  background: var(--green);
+}
+
+@media (max-width: 650px) {
+  .todoCounter {
+    padding: 1.5rem 0 2.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .todoCounter {
+    font-size: 1rem;
+    line-height: 1;
+  }
 }

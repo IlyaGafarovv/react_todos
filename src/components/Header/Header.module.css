@@ -1,0 +1,48 @@
+.header {
+  min-width: 100%;
+  padding: 5rem;
+}
+
+.title {
+  font-size: 6rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  user-select: none;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+}
+
+.images > img {
+  width: 8rem;
+  height: 8rem;
+}
+
+@media (max-width: 650px) {
+  .header {
+    padding: 3rem;
+  }
+
+  .images > img {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .images > img {
+    width: 5rem;
+    height: 5rem;
+  }
+}

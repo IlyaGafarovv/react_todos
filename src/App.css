@@ -15,100 +15,31 @@ button {
   color: inherit;
 }
 
+:root {
+  --black: #331c21;
+  --white: #f3f4f6;
+  --green: rgb(25, 207, 80);
+}
+
+html {
+  font-size: 62.5%;
+}
+
 html,
 body {
   height: 100%;
   overflow-x: hidden;
 
-  font-family: 'Space Mono', monospace, Helvetica, Arial, sans-serif;
-  font-size: 62, 5%;
+  background-color: var(--white);
 
-  color: #000000;
+  font-family: 'Space Mono', monospace, Helvetica, Arial, sans-serif;
+  color: var(--black);
 }
 
 .app {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   min-width: 100vw;
-}
-
-.app::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-
-  opacity: 0.4;
-  background-image: url('./assets/images/grid.svg');
-
-  position: absolute;
-  top: 0;
-  z-index: 1;
-
-  filter: invert(1);
-}
-
-.app::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-
-  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
-
-  position: absolute;
-  top: 0;
-  z-index: 2;
-}
-
-.gradient {
-  height: fit-content;
-
-  opacity: 0.15;
-  background-image: radial-gradient(
-      at 27% 37%,
-      hsla(215, 98%, 61%, 1) 0px,
-      transparent 0%
-    ),
-    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
-    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
-    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
-    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
-    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
-    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
-
-  content: '';
-  width: 100%;
-  height: 100%;
-
-  position: absolute;
-  top: 0;
-  z-index: 3;
-
-  filter: blur(100px) saturate(150%);
-}
-
-.main {
-  min-height: 100vh;
-  width: 100vw;
-  max-width: 60rem;
-  margin: 2rem auto;
-
-  text-align: center;
-  z-index: 4;
-}
-
-.title {
-  margin-bottom: 1rem;
-
-  font-size: 4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #f44250;
-
-  user-select: none;
-}
-
-.title span {
-  color: #fecc1b;
 }

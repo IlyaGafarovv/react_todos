@@ -9,7 +9,7 @@ export default function TodoCounter() {
   const { completedTodosCount } = useContext(TodoContext) as TodoContextType
 
   return (
-    <div className={style.todoCounterContainer}>
+    <div className={style.todoCounter}>
       {completedTodosCount > 0 && (
         <h2>{`You have completed ${completedTodosCount} ${
           completedTodosCount > 1 ? 'todos' : 'todo'

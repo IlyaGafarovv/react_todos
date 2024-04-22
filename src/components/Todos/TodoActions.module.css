@@ -1,3 +1,21 @@
 .todoActionsContainer {
   margin-bottom: 3rem;
 }
+
+.todoActionsContainer > button {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  .todoActionsContainer {
+    margin-bottom: 2rem;
+  }
+
+  .todoActionsContainer > button:first-child {
+    margin: 0;
+  }
+
+  .todoActionsContainer > button {
+    font-size: 1.4rem;
+  }
+}

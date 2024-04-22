@@ -9,30 +9,24 @@ import style from './Todo.module.css'
 import { TodoContext } from 'context/todoContext'
 import { ITodo, TodoContextType } from 'types/todo'
 
-type Props = {
-  todo: ITodo
-}
-
-export default function Todo({ todo }: Props) {
+export default function Todo({ id, text, isCompleted }: ITodo) {
   const { toggleTodo, deleteTodo } = useContext(TodoContext) as TodoContextType
 
   return (
-    <div
-      className={`${style.todo} ${todo.isCompleted ? style.completedTodo : ''}`}
-    >
+    <li className={`${style.todo} ${isCompleted ? style.completedTodo : ''}`}>
       <BsFileEarmarkRichtext className={style.todoIcon} />
-      <h4 className={style.todoText}>{todo.text}</h4>
+      <h4 className={style.todoText}>{text}</h4>
 
       <BiSolidTrashAlt
         className={style.deleteIcon}
-        onClick={() => deleteTodo(todo.id)}
         title='Delete Todo'
+        onClick={() => deleteTodo(id)}
       />
       <IoCheckmarkDoneOutline
         className={style.checkIcon}
-        onClick={() => toggleTodo(todo.id)}
         title='Mark as Completed'
+        onClick={() => toggleTodo(id)}
       />
-    </div>
+    </li>
   )
 }

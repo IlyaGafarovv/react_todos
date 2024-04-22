@@ -11,12 +11,12 @@ export default function TodoList() {
   const { todos } = useContext(TodoContext) as TodoContextType
 
   return (
-    <div className={style.todoListContainer}>
-      {!todos.length && <h2>Todo list is empty</h2>}
+    <ul>
+      {!todos.length && <h2 className={style.title}>Todo list is empty</h2>}
 
       {todos.map((todo) => (
-        <Todo key={todo.id} todo={todo} />
+        <Todo key={todo.id} {...todo} />
       ))}
-    </div>
+    </ul>
   )
 }

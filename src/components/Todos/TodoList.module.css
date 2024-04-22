@@ -1,3 +1,9 @@
-.todoListContainer {
-  margin-bottom: 1rem;
+.title {
+  font-size: 2.8rem;
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 2rem;
+  }
 }

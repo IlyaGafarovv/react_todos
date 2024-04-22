@@ -1,22 +1,21 @@
 import 'App.css'
 
-import { TodoForm, TodoList, TodoActions, TodoCounter } from 'components/Todos'
+import {
+  Header,
+  TodoForm,
+  TodoActions,
+  TodoList,
+  TodoCounter,
+} from 'components'
 
 export default function App() {
   return (
     <div className='app'>
-      <div className='gradient' />
-
-      <main className='main'>
-        <h1 className='title'>
-          todos <span>app</span>
-        </h1>
-
-        <TodoForm />
-        <TodoActions />
-        <TodoList />
-        <TodoCounter />
-      </main>
+      <Header />
+      <TodoForm />
+      <TodoActions />
+      <TodoList />
+      <TodoCounter />
     </div>
   )
 }

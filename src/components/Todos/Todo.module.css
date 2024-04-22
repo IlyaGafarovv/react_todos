@@ -1,62 +1,84 @@
 .todo {
   display: flex;
   align-items: center;
-  width: 100%;
-  max-width: 40rem;
-  padding: 1rem 2rem;
+  width: 60rem;
   margin: 2rem auto;
+  padding: 2rem 3rem;
 
-  border-radius: 0.4rem;
-  background: transparent;
-  border: 2px solid #555;
+  border-radius: 0.2rem;
+  border: 2px solid var(--black);
 
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #104d51;
 }
 
 .todoText {
   width: 100%;
-  margin: 0;
-
   text-align: left;
 }
 
 .todoText::selection {
-  background: rgb(25, 207, 80);
-}
-
-.completedTodo {
-  text-decoration: line-through;
-  color: teal;
-}
-
-.todo.completedTodo .checkIcon {
-  color: #fecc1b;
+  background: var(--green);
 }
 
 .todoIcon {
   margin-right: 1rem;
 
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   color: teal;
 }
 
 .checkIcon,
 .deleteIcon {
-  margin: 0 0.3rem;
+  padding: 0.5rem;
 
-  font-size: 2rem;
+  border-radius: 0.5rem;
+
+  font-size: 3.5rem;
   color: teal;
 
-  transition: color 0.2s linear;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 
+.checkIcon:hover,
 .deleteIcon:hover {
-  color: #3992ff;
+  color: var(--white);
+  background-color: var(--black);
 }
 
-.checkIcon:hover {
-  color: #fecc1b;
+.completedTodo {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+@media (max-width: 650px) {
+  .todo {
+    width: 50rem;
+    padding: 1rem 2rem;
+
+    font-size: 2rem;
+  }
+
+  .checkIcon,
+  .deleteIcon {
+    padding: 0.3rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .todo {
+    width: 30rem;
+    margin: 1rem auto;
+    padding: 0.6rem 1rem;
+
+    font-size: 1.5rem;
+  }
+
+  .checkIcon,
+  .deleteIcon {
+    padding: 0.2rem;
+    font-size: 2.2rem;
+  }
 }

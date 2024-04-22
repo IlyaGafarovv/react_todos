@@ -1,5 +1,5 @@
 .todoFormContainer {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .todoFormContainer form {
@@ -9,23 +9,60 @@
 }
 
 .todoFormContainer input {
-  width: 45%;
-  padding: 0.8rem 1.5rem;
+  width: 40rem;
+  padding: 1rem 3rem;
 
-  outline: 1px solid #dfd6d6;
-  border-radius: 0.4rem;
+  border-radius: 0.2rem;
+  outline: 2px solid var(--black);
 
-  font-family: inherit;
-  font-size: 1.5rem;
+  font-size: 2rem;
 
-  transition: all 0.1s linear;
+  transition: all 0.2s ease-out;
 }
 
 .todoFormContainer input::placeholder {
-  color: #3992ff;
+  color: var(--black);
 }
 
 .todoFormContainer input:focus {
-  background: transparent;
-  outline-color: #553d3f;
+  background-color: #fff;
+}
+
+.todoFormContainer input::selection {
+  background-color: var(--green);
+}
+
+@media (max-width: 650px) {
+  .todoFormContainer {
+    margin-bottom: 3rem;
+  }
+
+  .todoFormContainer input {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .todoFormContainer {
+    margin-bottom: 2rem;
+  }
+
+  .todoFormContainer form {
+    flex-direction: column;
+  }
+
+  .todoFormContainer input {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem 1rem;
+
+    font-size: 1.5rem;
+  }
+
+  .todoFormContainer form > button {
+    width: 100%;
+    margin: 0;
+    
+    font-size: 1.3rem;
+  }
 }
