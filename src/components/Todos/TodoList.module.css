@@ -4,6 +4,18 @@
 
 @media (max-width: 500px) {
   .title {
-    font-size: 2rem;
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 1.6rem;
   }
 }

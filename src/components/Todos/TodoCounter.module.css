@@ -9,12 +9,17 @@
 
 @media (max-width: 650px) {
   .todoCounter {
-    padding: 1.5rem 0 2.5rem;
     font-size: 1.5rem;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 376px) {
+  .todoCounter {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 320px) {
   .todoCounter {
     font-size: 1rem;
     line-height: 1;

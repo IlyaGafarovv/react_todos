@@ -54,26 +54,41 @@
 
 @media (max-width: 650px) {
   .todo {
-    width: 50rem;
+    width: 38rem;
     padding: 1rem 2rem;
 
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .checkIcon,
   .deleteIcon {
-    padding: 0.3rem;
-    font-size: 2.5rem;
+    padding: 0.4rem;
+    font-size: 3rem;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 376px) {
+  .todo {
+    width: 35rem;
+    margin: 1rem auto;
+    padding: 0.8rem 1rem;
+
+    font-size: 1.6rem;
+  }
+
+  .checkIcon,
+  .deleteIcon {
+    padding: 0.4rem;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 320px) {
   .todo {
     width: 30rem;
-    margin: 1rem auto;
     padding: 0.6rem 1rem;
 
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .checkIcon,

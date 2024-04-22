@@ -34,16 +34,6 @@
 
 @media (max-width: 650px) {
   .todoFormContainer {
-    margin-bottom: 3rem;
-  }
-
-  .todoFormContainer input {
-    width: 30rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .todoFormContainer {
     margin-bottom: 2rem;
   }
 
@@ -54,15 +44,36 @@
   .todoFormContainer input {
     width: 100%;
     margin-bottom: 1rem;
-    padding: 0.8rem 1rem;
+    padding: 1rem 1.5rem;
 
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .todoFormContainer form > button {
     width: 100%;
     margin: 0;
-    
+
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .todoFormContainer input {
+    padding: 0.8rem 1rem;
+    font-size: 2.2rem;
+  }
+
+  .todoFormContainer form > button {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .todoFormContainer input {
+    font-size: 1.5rem;
+  }
+
+  .todoFormContainer form > button {
     font-size: 1.3rem;
   }
 }

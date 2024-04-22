@@ -6,15 +6,22 @@
   font-size: 2rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   .todoActionsContainer {
     margin-bottom: 2rem;
   }
-
   .todoActionsContainer > button:first-child {
     margin: 0;
   }
+}
 
+@media (max-width: 376px) {
+  .todoActionsContainer > button {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 320px) {
   .todoActionsContainer > button {
     font-size: 1.4rem;
   }
