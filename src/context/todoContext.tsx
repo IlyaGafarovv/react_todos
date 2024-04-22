@@ -8,7 +8,14 @@ export const TodoContext = React.createContext<TodoContextType | null>(null)
 const TodoProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [todos, setTodos] = React.useState<ITodo[]>([])
+  const [todos, setTodos] = React.useState<ITodo[]>(() => {
+    const storedData = localStorage.getItem('todos')
+    return storedData ? JSON.parse(storedData) : []
+  })
+
+  React.useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
 
   const addTodo = (text: string) => {
     const newTodo: ITodo = {
