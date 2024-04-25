@@ -10,7 +10,7 @@ import { TodoContext } from 'context/todoContext'
 
 import Button from '../UI/Button'
 
-export default function TodoActions() {
+export const TodoActions = () => {
   const { todos, resetTodos, deleteCompletedTodos } = useContext(
     TodoContext
   ) as TodoContextType

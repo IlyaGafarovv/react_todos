@@ -5,7 +5,7 @@ import learn from 'assets/icons/learn.svg'
 import football from 'assets/icons/football.svg'
 import style from './Header.module.css'
 
-export default function Header() {
+export const Header = () => {
   return (
     <header className={style.header}>
       <h1 className={style.title}>todos app</h1>

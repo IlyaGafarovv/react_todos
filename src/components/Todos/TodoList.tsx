@@ -5,9 +5,9 @@ import style from './TodoList.module.css'
 import { TodoContext } from 'context/todoContext'
 import { TodoContextType } from 'types/todo'
 
-import Todo from './Todo'
+import { Todo } from './Todo'
 
-export default function TodoList() {
+export const TodoList = () => {
   const { todos } = useContext(TodoContext) as TodoContextType
 
   return (

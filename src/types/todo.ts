@@ -8,6 +8,7 @@ export type TodoContextType = {
   todos: ITodo[]
   addTodo: (text: string) => void
   toggleTodo: (id: string) => void
+  editTodo: (id: string, newText: string) => void
   deleteTodo: (id: string) => void
   deleteCompletedTodos: () => void
   resetTodos: () => void

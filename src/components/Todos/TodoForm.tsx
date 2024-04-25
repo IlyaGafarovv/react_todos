@@ -7,7 +7,7 @@ import { TodoContextType } from 'types/todo'
 
 import Button from '../UI/Button'
 
-export default function TodoForm() {
+export const TodoForm = () => {
   const { addTodo } = React.useContext(TodoContext) as TodoContextType
   const [text, setText] = React.useState('')
 

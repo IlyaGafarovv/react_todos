@@ -1,4 +1,4 @@
-.todo {
+.container {
   display: flex;
   align-items: center;
   width: 60rem;
@@ -9,27 +9,27 @@
   border: 2px solid var(--black);
 
   font-size: 2.5rem;
-  font-weight: 700;
 }
 
-.todoText {
-  width: 100%;
-}
-
-.todoText::selection {
-  background: var(--green);
-}
-
-.todoIcon {
+.editorIcon {
   margin-right: 1rem;
 
   font-size: 2.5rem;
   color: teal;
 }
 
-.editIcon,
-.checkIcon,
-.deleteIcon {
+.input {
+  width: 100%;
+
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.icon {
   padding: 0.5rem;
 
   border-radius: 0.5rem;
@@ -41,36 +41,31 @@
   cursor: pointer;
 }
 
-.editIcon:hover,
-.checkIcon:hover,
-.deleteIcon:hover {
+.icon:hover {
   color: var(--white);
   background-color: var(--black);
 }
 
-.completedTodo {
-  opacity: 0.5;
-  text-decoration: line-through;
-}
-
 @media (max-width: 650px) {
-  .todo {
+  .container {
     width: 38rem;
     padding: 1rem 2rem;
 
     font-size: 1.6rem;
   }
 
-  .editIcon,
-  .deleteIcon,
-  .checkIcon {
+  .input {
+    font-size: 1.6rem;
+  }
+
+  .icon {
     padding: 0.4rem;
     font-size: 3rem;
   }
 }
 
 @media (max-width: 376px) {
-  .todo {
+  .container {
     width: 35rem;
     margin: 1rem auto;
     padding: 0.8rem 1rem;
@@ -78,16 +73,18 @@
 }
 
 @media (max-width: 320px) {
-  .todo {
+  .container {
     width: 30rem;
     padding: 0.6rem 1rem;
 
     font-size: 1.3rem;
   }
 
-  .editIcon,
-  .deleteIcon,
-  .checkIcon {
+  .input {
+    font-size: 1.3rem;
+  }
+
+  .icon {
     padding: 0.2rem;
     font-size: 2.2rem;
   }

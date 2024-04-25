@@ -36,6 +36,14 @@ const TodoProvider: React.FC<{ children: React.ReactNode }> = ({
     )
   }
 
+  const editTodo = (id: string, newText: string) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, text: newText } : { ...todo }
+      )
+    )
+  }
+
   const deleteTodo = (id: string) => {
     setTodos(todos.filter((todo) => todo.id !== id))
   }
@@ -56,6 +64,7 @@ const TodoProvider: React.FC<{ children: React.ReactNode }> = ({
         todos,
         addTodo,
         toggleTodo,
+        editTodo,
         deleteTodo,
         deleteCompletedTodos,
         resetTodos,
