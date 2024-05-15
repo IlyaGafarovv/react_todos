@@ -6,4 +6,5 @@
 - Context API
 - TypeScript
 - CSS
+- Docker
 - Rsbuild
